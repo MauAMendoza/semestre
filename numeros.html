@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Numeros a letras</h1>
+        <button onclick="myFunction()">Empezar</button>
+        <script>
+            function myFunction() 
+            {
+                numero = prompt("Escribe un numero de cero a un millon: ");
+                var n1 = (numero / 1000000);	    //1 millon
+                var n2 = ((numero / 100000) % 10);	//centenas de mil
+                var n3 = ((numero / 10000) % 10);	//decenas de mil
+                var n4 = ((numero / 1000) % 10);    //unidades de mil
+                var n5 = ((numero / 100) % 10);	    //centenas
+                var n6 = ((numero / 10) % 10);	    //decenas
+                var n7 = (numero % 10);			    //unidades
+
+                document.write("millon: ",n1)
+                document.write("<br>")
+                document.write("centenas de mil: ",n3)
+                document.write("<br>")
+                document.write("decenas de mil: ",n3)
+                document.write("<br>")
+                document.write("unidades de mil: ",n4)
+                document.write("<br>")
+                document.write("centenas: ",n5)
+                document.write("<br>")
+                document.write("decenas: ",n6)
+                document.write("<br>")
+                document.write("unidades: ",n7)
+                document.write("<br>")
+             
+                // 1 millon y cientos de miles
+                if(numero > 1000000){
+                    alert("solo numeros de cero a un millon");
+                }else if(n1 == 1){
+                    document.write("un millon");
+                }else if(n2 == 1){
+                    document.write("cien mil");
+                }else if(n2 == 2){
+                    document.write("doscientos mil")
+                }else if(n2 == 3){
+                    document.write("trescientos mil")
+                }else if(n2 == 4){
+                    document.write("cuatrocientos mil")
+                }else if(n2 == 5){
+                    document.write("quinientos mil")
+                }else if(n2 == 6){
+                    document.write("seiscientos mil")
+                }else if(n2 == 7){
+                    document.write("setecientos mil")
+                }else if(n2 == 8){
+                    document.write("ochocientos mil")
+                }else if(n2 == 9){
+                    document.write("novecientos mil")
+                }
+                //Sentencia para determinar los miles
+                if(n4 == 1){
+                    document.write("MIL ");
+                }else if(n4 == 2){
+                    document.write("DOS MIL ");
+                }else if(n4 == 3){
+                    document.write("TRES MIL ");
+                }else if(n4 == 4){
+                    document.write("CUATRO MIL ");
+                }else if(n4 == 5){
+                    document.write("CINCO MIL ");
+                }else if(n4 == 6){
+                    document.write("SEIS MIL ");
+                }else if(n4 == 7){
+                    document.write("SIETE MIL ");
+                }else if(n4 == 8){
+                    document.write("ocho mil ");
+                }else if(n4 == 9){
+                    document.write("nueve mil ");
+                }
+                //Sentencia para determinar los cientos
+                if(n5 == 1 && n6 == 0 && n7 == 0){
+                    document.write("cien");
+                }else if(n5 == 1){
+                    document.write("ciento");
+                }else if(n5 == 2){
+                    document.write("doscientos ");
+                }else if(n5 == 3){
+                    document.write("trescientos ");
+                }else if(n5 == 4){
+                    document.write("cuatrocientos");
+                }else if(n5 == 5){
+                    document.write("quinientos ");
+                }else if(n5 == 6){
+                    document.write("seiscientos ");
+                }else if(n5 == 7){
+                    document.write("setecientos ");
+                }else if(n5 == 8){
+                    document.write("ochocientos ");
+                }else if(n5 == 9){
+                    document.write("novencientos ");
+                }
+                //sentecia que determina las unidades
+                if(n7==1 && n6>1){
+                    document.write("uno");
+                }else if(n7 == 1){
+                    document.write("uno"); 
+                }else if(n7 == 2 && n6 > 1){
+                    document.write("dos");
+                }else if(n7 == 2){
+                    document.write("dos");
+                }else if(n7 == 3 && n6 > 1){
+                    document.write("tres");
+                }else if(n7 == 3){
+                    document.write("tres"); 
+                }else if(n7 == 4 && n6 > 1){
+                    document.write("cuatro");
+                }else if(n7 == 4){
+                    document.write("cuatro"); 
+                }else if(n7 == 5 && n6 > 1){
+                    document.write("cinco");
+                }else if(n7 == 5 ){
+                    document.write("cinco");
+                }else if(n7 == 6){
+                    document.write("seis");
+                }else if(n7 == 7){
+                    document.write("siete");
+                }else if(n7 == 8){
+                    document.write("ocho");
+                }else if(n7 == 9){
+                    document.write("nueve");
+                }else if(n7 == 0 && n1 == 0 && n2 == 0 && n3 == 0 && n4 == 0 && n5 == 0 && n6 == 0){
+                    document.write("cero");
+                }
+            }
+        </script>
+    </body>
+</html>
